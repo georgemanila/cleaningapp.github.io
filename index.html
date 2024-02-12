@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cleaning Service App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Cleaning Service App</h1>
+
+    <div id="entryForm">
+        <input type="date" id="date" required>
+        <input type="text" id="location" placeholder="Location" required list="locationList">
+        <datalist id="locationList"></datalist>
+        <input type="text" id="hours" placeholder="HH:MM (e.g., 1:30)" required>
+        <button onclick="addEntry()">Add Entry</button>
+    </div>
+
+    <div id="entries">
+        <h2>Entry Log</h2>
+        <table id="entriesTable">
+            <thead>
+                <tr><th>Date</th><th>Location</th><th>Hours Worked</th></tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <div id="totalsTableContainer">
+        <h2>Work Hours Calendar</h2>
+        <table id="totalsTable">
+            <thead></thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
